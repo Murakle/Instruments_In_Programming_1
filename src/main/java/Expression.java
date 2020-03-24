@@ -1,3 +1,4 @@
+
 public class Expression { // E = M/ N where M is integer, N is natural
     private int m;
     private int n;
@@ -31,17 +32,22 @@ public class Expression { // E = M/ N where M is integer, N is natural
     }
 
 
-    public int gcd(int a, int b) {
-        while (a != b) {
-            if (a > b) a %= b;
-            else b %= a;
-        }
-        return a;
+    int gcd(int a, int b) {
+        return b > 0 ? gcd(b, a % b) : a;
     }
 
     @Override
     public String toString() {
         return "" + m + " / " + n;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Expression that = (Expression) o;
+        return m == that.m &&
+                n == that.n;
     }
 
     public int getM() {
