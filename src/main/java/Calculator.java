@@ -48,9 +48,10 @@ public class Calculator { //Array of the expressions and operations with them
         expressions[c - 'a'] = val;
     }
 
-    public void sum(char wherToSet, char first, char second) {
-        expressions[wherToSet - 'a'] = expressions[first - 'a'].add(expressions[second - 'a']);
+    public void sum(char whereToSet, char first, char second) {
+        expressions[whereToSet - 'a'] = expressions[first - 'a'].add(expressions[second - 'a']);
     }
+
 
     public String getExpressions() {
         StringBuilder ans = new StringBuilder();
