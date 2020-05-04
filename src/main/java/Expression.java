@@ -22,15 +22,19 @@ public class Expression { // E = M/ N where M is integer, N is natural
     }
 
     public Expression add(Expression b) {
-        return new Expression(m * b.n + b.m * n, b.n * n);
+        return new Expression(m * b.n + b.m * n, n * b.n);
     }
 
     public Expression subtract(Expression b) {
-        return new Expression(m * b.n - b.m * n, b.n * n);
+        return new Expression(m * b.n - b.m * n, n * b.n);
     }
 
     public Expression multiply(Expression b) {
-        return new Expression(m * b.m, b.n * n);
+        return new Expression(m * b.m, n * b.n);
+    }
+
+    public Expression divide(Expression b) {
+        return new Expression(m * b.n, n * b.m);
     }
 
     private void simplify() {
