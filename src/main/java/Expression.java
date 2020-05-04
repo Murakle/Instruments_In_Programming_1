@@ -25,6 +25,10 @@ public class Expression { // E = M/ N where M is integer, N is natural
         return new Expression(m * b.n + b.m * n, b.n * n);
     }
 
+    public Expression subtract(Expression b) {
+        return new Expression(m * b.n - b.m * n, b.n * n);
+    }
+
     private void simplify() {
         int g = gcd(Math.abs(m), n);
         m /= g;
@@ -32,7 +36,7 @@ public class Expression { // E = M/ N where M is integer, N is natural
     }
 
 
-    int gcd(int a, int b) {
+    private int gcd(int a, int b) {
         return b > 0 ? gcd(b, a % b) : a;
     }
 
