@@ -5,6 +5,7 @@ public class Calculator { //Array of the expressions and operations with them
     public Calculator() {
         expressions = new Expression[26];
     }
+
     /*
         run operations:
             exit
@@ -13,6 +14,7 @@ public class Calculator { //Array of the expressions and operations with them
             out c
             outall
      */
+
     public void run() {
         IO rw = new IO();
         String operation = "";

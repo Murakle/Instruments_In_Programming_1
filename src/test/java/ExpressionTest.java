@@ -27,4 +27,5 @@ class ExpressionTest {
         Expression a = new Expression(18, 12);
         assertEquals(a, new Expression(3, 2));
     }
+
 }
