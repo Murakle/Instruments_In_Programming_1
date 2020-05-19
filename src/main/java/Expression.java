@@ -8,6 +8,7 @@ public class Expression { // E = M/ N where M is integer, N is natural
         this.n = 1;
     }
 
+
     public Expression(int m, int n) {
         if (n < 0) {
             this.n = -n;
@@ -22,7 +23,24 @@ public class Expression { // E = M/ N where M is integer, N is natural
     }
 
     public Expression add(Expression b) {
-        return new Expression(m * b.n + b.m * n, b.n * n);
+        return new Expression(m * b.n + b.m * n, n * b.n);
+    }
+
+    public Expression subtract(Expression b) {
+        return new Expression(m * b.n - b.m * n, n * b.n);
+    }
+
+    public Expression multiply(Expression b) {
+        return new Expression(m * b.m, n * b.n);
+    }
+
+    public Expression divide(Expression b) {
+        return new Expression(m * b.n, n * b.m);
+    }
+
+    //b = 100/1 => 100%
+    public Expression percent(Expression b) {
+        return multiply(b).divide(new Expression(1, 100));
     }
 
     private void simplify() {
@@ -32,7 +50,7 @@ public class Expression { // E = M/ N where M is integer, N is natural
     }
 
 
-    int gcd(int a, int b) {
+    private int gcd(int a, int b) {
         return b > 0 ? gcd(b, a % b) : a;
     }
 

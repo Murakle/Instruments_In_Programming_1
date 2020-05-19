@@ -15,6 +15,33 @@ class ExpressionTest {
     }
 
     @Test
+    void subtractTest() {
+        Expression a = new Expression(5, 3);
+        Expression b = new Expression(7, 4);
+        Expression c = new Expression(-1, 12);
+        Expression res = a.subtract(b);
+        assertEquals(res, c);
+    }
+
+    @Test
+    void multiplyTest() {
+        Expression a = new Expression(5, 3);
+        Expression b = new Expression(7, 4);
+        Expression c = new Expression(35, 12);
+        Expression res = a.subtract(b);
+        assertEquals(res, c);
+    }
+
+    void divideTest() {
+        Expression a = new Expression(5, 3);
+        Expression b = new Expression(7, 4);
+        Expression c = new Expression(20, 21);
+        Expression res = a.subtract(b);
+        assertEquals(res, c);
+    }
+
+
+    @Test
     void creatingTest() {
         Throwable thrown = assertThrows(ArithmeticException.class, () -> {
             new Expression(5, 0);

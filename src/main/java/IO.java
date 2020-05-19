@@ -23,6 +23,7 @@ public class IO {
         return in.nextToken();
     }
 
+    // prints and flush
     public void printF(String s) {
         pw.print(s);
         pw.flush();
