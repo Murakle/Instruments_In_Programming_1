@@ -1,6 +1,9 @@
 
+import java.io.IOException;
+
 public class Calculator { //Array of the expressions and operations with them
     Expression[] expressions;
+
 
     public Calculator() {
         expressions = new Expression[26];
@@ -17,7 +20,7 @@ public class Calculator { //Array of the expressions and operations with them
             out c
             outall
      */
-    public void run() {
+    public void run() throws IOException {
         IO rw = new IO();
         String operation = "";
         while (true) {
