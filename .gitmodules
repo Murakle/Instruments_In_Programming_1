@@ -1,0 +1,6 @@
+[submodule "src/main/java/jdbc/jdbc-java-connector"]
+	path = src/main/java/jdbc/jdbc-java-connector
+	url = https://github.com/algolia/jdbc-java-connector.git
+[submodule "src/main/java/algoliasearch-client-java-2"]
+	path = src/main/java/algoliasearch-client-java-2
+	url = https://github.com/algolia/algoliasearch-client-java-2.git
